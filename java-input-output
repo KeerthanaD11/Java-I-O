@@ -1,0 +1,66 @@
+// 1. Print Name and age:
+
+import java.util.Scanner;
+public class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println();
+		String name = sc.nextLine();
+
+		System.out.println();
+		int age = sc.nextInt();
+
+		System.out.println("The name of the person is " +name+ " and the age is " +age+".");
+		
+		// Write code here
+		
+	}
+}
+
+// 2. Calculate Simple Interest
+//Take the principal amount, rate of interest, and the time period as input and calculate the Simple Interest.
+
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println();
+		float principal = sc.nextFloat();
+    System.out.println();
+		float rate = sc.nextFloat();
+
+		System.out.println();
+		float time = sc.nextFloat();
+
+		float in = principal*rate*time/100;
+		int interest = (int)in;
+		System.out.println(interest);
+		
+		
+		// Write code here
+		
+	}
+}
+
+// 3. Find Area of Rectangle
+//Take the length(L) and breadth(B) of the rectangle as input and find its area.
+
+import java.util.*;
+class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int l = sc.nextInt();
+		int b = sc.nextInt();
+
+		int area = l*b;
+		System.out.println(area);
+		// Write code here
+    		
+	  }
+  }
