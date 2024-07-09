@@ -1,0 +1,107 @@
+// 1. Sum Of Even Numbers Till N
+//You have been given a number 'N'. Your task is to find the sum of all even numbers from 1 to 'N' (both inclusive).
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+	public static long evenSumTillN(int n) {
+		long sum = 0;
+		for(int i=1;i<=n;i++){
+			if(i%2==0){
+				sum =sum + i;
+			}	
+		}
+		return sum;
+	}
+
+	public static void main(String args[]){
+		System.out.println(evenSumTillN(8));
+		System.out.println(evenSumTillN(7));
+	}
+}
+
+// 2. Fahrenheit to Celsius
+/*Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E), and Step Size (W), you need to convert all Fahrenheit values from Start to End at 
+the gap of W into their corresponding Celsius values and print the table.*/
+import java.util.* ;
+import java.io.*; 
+class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int start = sc.nextInt();
+		int end = sc.nextInt();
+		int step = sc.nextInt();
+		for(int i=start; i<=end; i+=step){
+			System.out.println(i+"\t"+5*(i-32)/9);
+		}
+		
+	}
+}
+
+// 3. Sum of even & odd
+//Write a program to input an integer N and print the sum of all its even digits and all its odd digits separately.
+//Digits mean numbers, not the places! If the given integer is "13245", the even digits are 2 and 4, and the odd digits are 1, 3, and 5.
+import java.util.*;
+class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int rem=0,sumOdd=0,sumEven=0;
+		while(a>0){
+			rem = a%10;
+			if(rem%2==0){
+				sumEven+=rem;
+			}
+			else{
+				sumOdd+=rem;
+			}
+			a=a/10;
+		}
+		System.out.println(sumEven+"\t"+sumOdd);
+		
+	}
+}
+
+// 4. Find power of a number
+//Write a program to find x to the power n (i.e., x^n). Take x and n from the user. You need to print the answer.
+import java.util.* ;
+import java.io.*; 
+class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+		int n = sc.nextInt();
+		int value = 1;
+		for(int i=1; i<=n; i++){
+			value*=x;
+		}
+		System.out.println(value);
+	}
+}
+
+// 4. Factorial of a Number
+/*Write a program to find the factorial of a number.Factorial of n is:
+n! = n * (n-1) * (n-2) * (n-3)....* 1
+Output the factorial of 'n'. If it does not exist, output 'Error'.*/
+
+import java.util.*;
+public class Solution {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int output = 1;
+		if(n<0){
+			System.out.println("Error");
+		}
+		else{
+			for(int i=n;i>0;i--){
+			output*=i;
+			}
+			System.out.println(output);
+		}
+	}
+}
+
